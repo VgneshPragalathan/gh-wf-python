@@ -12,6 +12,7 @@ jobs:
 
   second-job:
     runs-on: ubuntu-latest
+    needs: my-first-job
     steps:
       - name: Print End
         run: echo "This is an end of the job"
