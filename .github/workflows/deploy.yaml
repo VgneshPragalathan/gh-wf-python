@@ -22,7 +22,7 @@ jobs:
           path: src/
 
       - name: Context Variable
-        run : echo "${{ toJSON(github) }}"
+        run : echo "${{ github }}"
 
   second-job:
     needs: my-first-job
