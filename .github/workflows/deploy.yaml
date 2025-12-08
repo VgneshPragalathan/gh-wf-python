@@ -14,3 +14,9 @@ jobs:
 
       - name: Run Script
         run: python main.py
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: python-output
+          path: src/
