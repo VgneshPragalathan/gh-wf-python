@@ -14,4 +14,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print End
-        run: "This is an end of the job"
+        run: echo "This is an end of the job"
