@@ -9,3 +9,9 @@ jobs:
 
       - name: Print End
         run:  echo "World"
+
+  second-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print End
+        run: "This is an end of the job"
