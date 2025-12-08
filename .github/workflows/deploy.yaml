@@ -32,4 +32,6 @@ jobs:
           path: downloaded/
 
       - name: List downloaded files
-        run: ls -R downloaded
+        run: |
+              ls -R downloaded
+              cat result.txt
