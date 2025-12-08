@@ -21,6 +21,9 @@ jobs:
           name: python-output
           path: src/
 
+      - name: Context Variable
+        run : echo "${{ toJSON(github) }}"
+
   second-job:
     needs: my-first-job
     runs-on: ubuntu-latest
