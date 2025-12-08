@@ -37,4 +37,3 @@ jobs:
       - name: List downloaded files
         run: |
               ls -R downloaded
-              cat result.txt
