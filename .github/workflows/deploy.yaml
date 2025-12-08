@@ -1,0 +1,11 @@
+name: Python Workflow
+on: workflow_dispatch
+jobs: 
+  my-first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Hello
+        run: echo "Hello Peeps"
+
+      - name: Print End
+        run:  echo "World"
