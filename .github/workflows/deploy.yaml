@@ -35,4 +35,4 @@ jobs:
     needs: my-first-job
     steps:
       - name: Access output var from job 1
-        run : echo "Job1 Output : ${{ needs.my-first-job.outputs.job1_op }}"
+        run : echo "Job1 Output ${{ needs.my-first-job.outputs.job1_op }}"
