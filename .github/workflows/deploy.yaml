@@ -3,6 +3,8 @@ on: workflow_dispatch
 jobs: 
   my-first-job:
     runs-on: ubuntu-latest
+    outputs:
+      job1_op: 'Output from job1'
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -27,3 +29,9 @@ jobs:
 
       - name: Access Output
         run: echo "Output value is ${{ steps.set-output.outputs.name }}"
+
+  my-second-job:
+    needs: my-first-job
+    steps:
+      - name: Access output var from job 1
+        run : echo "Job1 Output : ${{ needs.my-first-job.outputs.job1_op }}"
