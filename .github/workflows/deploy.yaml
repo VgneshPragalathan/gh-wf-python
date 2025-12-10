@@ -21,19 +21,9 @@ jobs:
           name: python-output
           path: src/
 
-      - name: Context Variable
-        run : echo "${{ github }}"
+      - name: Set Output
+        id: set-output
+        run : echo name=Vicky >> GITHUB_OUTPUT
 
-  second-job:
-    needs: my-first-job
-    runs-on: ubuntu-latest
-    steps:
-      - name: Download artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: python-output
-          path: downloaded/
-
-      - name: List downloaded files
-        run: |
-              ls -R downloaded
+      - name: Access Output
+        run: echo "Output value is ${{ steps.set-output.output.name }}"
