@@ -23,7 +23,7 @@ jobs:
 
       - name: Set Output
         id: set-output
-        run : echo "name=Vicky" >> $GITHUB_OUTPUT
+        run : echo name=Vicky >> $GITHUB_OUTPUT
 
       - name: Access Output
         run: echo "Output value is ${{ steps.set-output.outputs.name }}"
