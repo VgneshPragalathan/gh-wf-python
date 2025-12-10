@@ -4,7 +4,7 @@ jobs:
   my-first-job:
     runs-on: ubuntu-latest
     outputs:
-      job1_op: 'Output from job1'
+      job1_op: ${{ steps.set-output.outputs.name }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
