@@ -12,6 +12,8 @@ on:
           - Male
           - Female
         required: true
+env:
+  ENV_NAME: environment
 jobs: 
   my-first-job:
     runs-on: ubuntu-latest
@@ -44,6 +46,9 @@ jobs:
 
       - name: Access Input
         run: echo ${{ inputs.name }}
+
+      - name: Access env var
+        run: echo $ENV_NAME
 
   my-second-job:
     runs-on: ubuntu-latest
