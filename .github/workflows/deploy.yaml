@@ -14,6 +14,7 @@ on:
         required: true
 env:
   ENV_NAME: environment
+
 jobs: 
   my-first-job:
     runs-on: ubuntu-latest
@@ -56,3 +57,8 @@ jobs:
     steps:
       - name: Access output var from job 1
         run : echo "Job1 Output ${{ needs.my-first-job.outputs.job1_op }}"
+      
+      - name: Access secrets
+        run: |
+          echo "Username ${{ secrets.ENV_USERNAME }}"
+          echo "Password ${{ secrets.ENV_PASSWORD }}"
