@@ -8,6 +8,9 @@ on:
         default: Vignesh
       gender:
         type: choice
+        options:
+          - Male
+          - Female
         required: true
 jobs: 
   my-first-job:
