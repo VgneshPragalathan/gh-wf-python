@@ -6,6 +6,9 @@ on:
         type: string
         description: "Name of the actor"
         default: Vignesh
+      gender:
+        type: choices
+        required: true
 jobs: 
   my-first-job:
     runs-on: ubuntu-latest
