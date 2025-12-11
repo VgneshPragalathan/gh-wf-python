@@ -1,5 +1,11 @@
 name: Python Workflow
-on: workflow_dispatch
+on: 
+  workflow_dispatch:
+    inputs:
+      name:
+        type: string
+        description: "Name of the actor"
+        default: Vignesh
 jobs: 
   my-first-job:
     runs-on: ubuntu-latest
