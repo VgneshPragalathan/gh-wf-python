@@ -7,7 +7,7 @@ on:
         description: "Name of the actor"
         default: Vignesh
       gender:
-        type: choices
+        type: choice
         required: true
 jobs: 
   my-first-job:
